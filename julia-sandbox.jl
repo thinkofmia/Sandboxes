@@ -3,7 +3,7 @@ using Statistics
 # Importing modules
 
 #Variables can be used by numbers, underscores, exclaimations or alphabets
-s = 0
+s = 090
 #Variables are dynamically assigned
-s = 'Dog'
+s = "Cat"
 println(s)
