@@ -96,13 +96,6 @@ definition "
 			y = v*3 ;
 			z=0;"
 
-#x=-u*3;
-#y=v*3;
-
-#x=3*u;
-#y=(3-3*u)*v;
-#
-
 # The parameters domain. Explore what happens when you make it 
 # smaller or bigger
 parameters [0 1 0 1]
