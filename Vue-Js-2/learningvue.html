@@ -92,6 +92,15 @@
     <!--Difference of v-show and v-if is that v-show doesn't take the element out of the dom, just display none-->
     <p v-show="error">Another error text~</p>
     <p v-show="success">WOW success!</p>
+
+    <!--Looping with v-for-->
+    <h1>Looping through lists</h1>
+    <ul>
+      <li v-for="character in characters">{{character}}</li>
+    </ul>
+    <ul>
+      <li v-for="ninja in ninjas">{{ninja.name}} ({{ninja.age}})</li>
+    </ul>
   </div>
   <script src="app.js"></script>
 </body>

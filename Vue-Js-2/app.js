@@ -9,6 +9,14 @@ new Vue({
         y: 0,
         a: 0,
         b: 0,
+        //Array of strings
+        characters: ['Hitomi','Mila','Zack','Gen Fu'],
+        //Array of objects
+        ninjas: [
+            {name:'Hayate', age: 27},
+            {name:'Kasumi', age: 18},
+            {name:'Hayabusa', age: 99}
+        ],
         error: false,
         success: false,
         available: false,
