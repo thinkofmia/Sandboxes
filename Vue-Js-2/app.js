@@ -31,6 +31,10 @@ new Vue({
             //Set new coordinates
             this.x = event.offsetX;
             this.y = event.offsetY; 
+        },
+        //Function on click
+        click: function(){
+            alert("You clicked me!");
         }
     }
 });

@@ -26,7 +26,8 @@
     <!--Events using v-on directive-->
     <!--On clicks-->
     <button @click="add(1)">Add a Year</button><!--Don't need to add parenthesis for functions in onclick events-->
-    <button v-on:click="subtract(1)">Subtract a Year</button>
+    <!--Modifiier.once to only listen for once-->
+    <button v-on:click.once="subtract(1)">Subtract a Year</button>
     <!--Double clicks-->
     <button @dblclick="add(10)">Add 10 Years</button>
     <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
@@ -34,8 +35,10 @@
 
     <!--Canvas mouseover-->
     <div id="canvas" v-on:mousemove="updateXY">{{x}} , {{y}}</div>
-  </div>
 
+    <!--Modifier to prevent default behavior-->
+    <a v-on:click.prevent="click" href="http://www.google.com">Link to Google</a>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
