@@ -9,6 +9,8 @@ new Vue({
         y: 0,
         a: 0,
         b: 0,
+        available: false,
+        nearby: false,
         website: 'http://www.thenetninja.co.uk',
         websiteTag: '<a href="http://www.thenetninja.co.uk">The Net Ninja Website</a>'
     },
@@ -54,6 +56,12 @@ new Vue({
         },
         addToB: function(){
             return this.b + this.age;
+        },
+        compClasses: function(){
+            return{
+                available: this.available,
+                nearby: this.nearby
+            }
         }
     }
 });

@@ -66,6 +66,20 @@
     <p>Age + A = {{addToA}}</p>
     <p>Age + B = {{addToB}}</p>
     <!--Watch variables that is to be calculated-->
+
+    <!--Dynamic CSS-->
+    <h1>Dynamic CSS</h1>
+    <h2>Example 1</h2>
+    <div v-bind:class="{red:false, blue:true}"></div>
+    <div v-on:click="available = !available" v-bind:class="{available: available}">
+      <span>Leon</span>
+    </div>
+    <h2>Example 2</h2>
+    <button v-on:click="nearby=!nearby">Toggle nearby</button>
+    <button v-on:click="available=!available">Toggle available</button>
+    <div v-bind:class="compClasses">
+      <span>Bayman</span>
+    </div>
   </div>
   <script src="app.js"></script>
 </body>
