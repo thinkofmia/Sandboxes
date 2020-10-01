@@ -55,6 +55,17 @@
     <label>Age:</label>
     <input type="text" v-model="age"/>
     <span>{{ age }}</span>
+
+    <!--Computed Properties-->
+    <h1>Computed Properties</h1>
+    <button v-on:click="a++">Add to A</button>
+    <button v-on:click="b++">Add to B</button>
+    <p>A - {{a}}</p>
+    <p>B - {{b}}</p>
+    <!--Computed properties: Only reruns the method if the value of A or B change-->
+    <p>Age + A = {{addToA}}</p>
+    <p>Age + B = {{addToB}}</p>
+    <!--Watch variables that is to be calculated-->
   </div>
   <script src="app.js"></script>
 </body>

@@ -4,9 +4,11 @@ new Vue({
     data: {
         name: 'Nina',
         job: 'Breaker',
-        age: '22',
-        x: '0',
-        y: '0',
+        age: 22,
+        x: 0,
+        y: 0,
+        a: 0,
+        b: 0,
         website: 'http://www.thenetninja.co.uk',
         websiteTag: '<a href="http://www.thenetninja.co.uk">The Net Ninja Website</a>'
     },
@@ -43,6 +45,15 @@ new Vue({
         //Log Age function
         logAge: function(){
             console.log("You entered your age.");
+        }
+    },
+    computed:{
+        //Add to Age Functions
+        addToA: function(){
+            return this.a + this.age;
+        },
+        addToB: function(){
+            return this.b + this.age;
         }
     }
 });
