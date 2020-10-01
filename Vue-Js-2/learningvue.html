@@ -11,13 +11,20 @@
 <body>
   <!--Whole application controlled by Vue-->
   <div id="vue-app">
+    <h1>Data Binding</h1>
+    <!--Website link-->
+    <a v-bind:href="website">The Net Ninja</a>
+    <!--V-bind is to do direct data binding-->
+    <input type="text" v-bind:value="job">
+    <!--Output html tags by calling v-html-->
+    <p v-html="websiteTag"></p>
     <!--Call functions-->
     <h1>{{ greet('night') }}</h1>
     <!--Gets the name data of the app-->
     <h1>{{ name }}</h1><!--Template in js format-->
     <p>Job: {{ job }}</p>
   </div>
-  
+
   <script src="app.js"></script>
 </body>
 </html>

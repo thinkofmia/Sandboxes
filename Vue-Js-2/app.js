@@ -3,7 +3,9 @@ new Vue({
     el:'#vue-app',
     data: {
         name: 'Nina',
-        job: 'Breaker'
+        job: 'Breaker',
+        website: 'http://www.thenetninja.co.uk',
+        websiteTag: '<a href="http://www.thenetninja.co.uk">The Net Ninja Website</a>'
     },
     //Method is a function
     methods: {
