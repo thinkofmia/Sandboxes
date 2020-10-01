@@ -80,6 +80,18 @@
     <div v-bind:class="compClasses">
       <span>Bayman</span>
     </div>
+
+    <!--Conditionals-->
+    <h1>Conditionals</h1>
+    <!--Use directive of v-if and v-show-->
+    <button v-on:click="error=!error">Toggle Error</button>
+    <button v-on:click="success=!success">Toggle Success</button>
+    <p v-if="error">Error here!</p><!--Shows if true, hidden if false-->
+    <p v-else-if="success">Succeeded! xD</p><!--Check else if-->
+
+    <!--Difference of v-show and v-if is that v-show doesn't take the element out of the dom, just display none-->
+    <p v-show="error">Another error text~</p>
+    <p v-show="success">WOW success!</p>
   </div>
   <script src="app.js"></script>
 </body>

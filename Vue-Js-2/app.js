@@ -9,6 +9,8 @@ new Vue({
         y: 0,
         a: 0,
         b: 0,
+        error: false,
+        success: false,
         available: false,
         nearby: false,
         website: 'http://www.thenetninja.co.uk',
