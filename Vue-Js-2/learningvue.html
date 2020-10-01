@@ -38,6 +38,23 @@
 
     <!--Modifier to prevent default behavior-->
     <a v-on:click.prevent="click" href="http://www.google.com">Link to Google</a>
+  
+    <!--Keyboard events-->
+    <h1>Keyboard Events</h1>
+    <label>Name:</label>
+    <!--Fire function when alt and enter is pressed-->
+    <input type="text" v-on:keyup.alt.enter="logName"/>
+    <label>Age:</label>
+    <!--Fire function when enter is pressed-->
+    <input type="text" v-on:keyup.enter="logAge"/>
+
+    <!--Two way data binding-->
+    <!--Update real time: Going 2 ways back and forth-->
+    <input type="text" v-model="name"/>
+    <span>{{ name }}</span>
+    <label>Age:</label>
+    <input type="text" v-model="age"/>
+    <span>{{ age }}</span>
   </div>
   <script src="app.js"></script>
 </body>
