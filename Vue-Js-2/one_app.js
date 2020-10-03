@@ -55,5 +55,28 @@ var two = new Vue({
     }
 })
 
+var three = new Vue({
+    el: '#vue-app-three',
+    data:{
+        output: 'Cheese Fries'
+
+    },
+    methods: {
+        readRefs: function(){
+            //Gets all the elements of the referencee
+            //Gets inputs and tests
+            console.log(this.$refs);
+            console.log(this.$refs.test.innerText);
+
+            //Update output
+            this.output = this.$refs.input.value;
+        }
+    },
+    computed: {
+        
+        
+    }
+})
+
 //Can change the title outside of the instances
 two.title = "Changed from outside";

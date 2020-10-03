@@ -28,6 +28,13 @@
             <!--Component template-->
             <greeting></greeting>
         </div>
+        <div id="vue-app-three">
+            <h2>Refs</h2>
+            <input type="text" ref="input" />
+            <button v-on:click="readRefs">Submit</button>
+            <p>Your fav food: {{output}}</p>
+            <div ref="test">What?</div>
+        </div>
 
         <script src="one_app.js"></script>
     </body>
