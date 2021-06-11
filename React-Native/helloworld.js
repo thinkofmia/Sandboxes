@@ -17,6 +17,9 @@ const styles = StyleSheet.create({
     backgroundColor: "goldenrod"
   },
   text : {
+    fontSize: 60,
+    fontWeight: "bold",
     color: "white",
+    textAlign: "center",
   },
 });
