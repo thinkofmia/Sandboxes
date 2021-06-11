@@ -26,4 +26,18 @@ const styles = StyleSheet.create({
     color: "white",
     textAlign: "center",
   },
+  fillerContainer: {
+    padding: 10,
+    backgroundColor: "blue",
+    flex: 0.25,
+    width: "50%",
+  },
+  titleContainer: {
+    backgroundColor: "orange",
+    padding: 10,
+    margin: 10,
+    flex: 0.5,
+    justifyContent: "center",
+    borderRadius: "25px",
+  },
 });
