@@ -14,6 +14,10 @@ export default function App() {
     setCount(count-1);
   }
 
+  function buttonReset(){
+    setCount(0);
+  }
+
   function renderEncouragingText(){
     if (count>=30){
       return "Aren't you tired?";
@@ -32,8 +36,11 @@ export default function App() {
       <TouchableOpacity onPress={buttonPressed} style={styles.button}>
         <Text style={styles.buttonText}>Click Meeee!</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={buttonUnpressed} style={styles.unclickbutton}>
+      <TouchableOpacity onPress={buttonUnpressed} style={styles.button}>
         <Text style={styles.buttonText}>Unclick me?</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={buttonReset} style={styles.unclickbutton}>
+        <Text style={styles.buttonText}>Reset multiverse</Text>
       </TouchableOpacity>
       <Text style={styles.encouragingText}>{renderEncouragingText()}</Text>
     </View>
