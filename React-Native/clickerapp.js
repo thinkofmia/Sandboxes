@@ -6,7 +6,8 @@ export default function App() {
   let [count, setCount] = useState(0);
 
   function buttonPressed(){
-    alert('You poked me! Owwie.');
+    alert(`You poked me! Owwie. Before pressing, the count was ${count}`);
+    setCount(count+1);
   }
 
   return (
