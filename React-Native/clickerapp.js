@@ -14,6 +14,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>{count}</Text>
       <Button title='Press Me!' onPress={buttonPressed} ></Button>
+      <Text style={styles.encouragingText}>Keep Going!</Text>
     </View>
   );
 }
@@ -25,4 +26,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  encouragingText: {
+    margin: 50,
+    backgroundColor: "darkgray",
+    color: "white",
+    padding: 10,
+    borderRadius: 20,
+  }
 });
