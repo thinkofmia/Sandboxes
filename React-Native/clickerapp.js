@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import CounterText from './components/CounterText';
 
 export default function App() {
 
@@ -32,7 +33,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.counter}>{count}</Text>
+      <CounterText color={"lightgray"} fontSize={10}>{count}</CounterText>
       <TouchableOpacity onPress={buttonPressed} style={styles.button}>
         <Text style={styles.buttonText}>Click Meeee!</Text>
       </TouchableOpacity>
