@@ -11,7 +11,13 @@ export default function App() {
   }
 
   function renderEncouragingText(){
-    if (count>=10){
+    if (count>=30){
+      return "Aren't you tired?";
+    }
+    else if (count>=20){
+      return "Owww, I think thats enough!";
+    }
+    else if (count>=10){
       return "Keep Going!";
     }
   }
