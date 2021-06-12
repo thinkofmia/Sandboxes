@@ -10,6 +10,10 @@ export default function App() {
     setCount(count+1);
   }
 
+  function buttonUnpressed(){
+    setCount(count-1);
+  }
+
   function renderEncouragingText(){
     if (count>=30){
       return "Aren't you tired?";
@@ -27,6 +31,9 @@ export default function App() {
       <Text style={styles.counter}>{count}</Text>
       <TouchableOpacity onPress={buttonPressed} style={styles.button}>
         <Text style={styles.buttonText}>Click Meeee!</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={buttonUnpressed} style={styles.unclickbutton}>
+        <Text style={styles.buttonText}>Unclick me?</Text>
       </TouchableOpacity>
       <Text style={styles.encouragingText}>{renderEncouragingText()}</Text>
     </View>
@@ -55,6 +62,12 @@ const styles = StyleSheet.create({
   button: {
     margin: 10,
     backgroundColor: "goldenrod",
+    padding: 20,
+    borderRadius: 20,
+  },
+  unclickbutton: {
+    margin: 10,
+    backgroundColor: "red",
     padding: 20,
     borderRadius: 20,
   },
