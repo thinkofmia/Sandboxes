@@ -34,6 +34,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <CounterText color={"lightgray"} fontSize={10}>{count}</CounterText>
+      <CounterText color={"lightblue"} fontSize={30}>{count}</CounterText>
+      <CounterText color={"blue"} fontSize={60}>{count}</CounterText>
+      <CounterText color={"navy"} fontSize={90}>{count}</CounterText>
       <TouchableOpacity onPress={buttonPressed} style={styles.button}>
         <Text style={styles.buttonText}>Click Meeee!</Text>
       </TouchableOpacity>
@@ -68,13 +71,13 @@ const styles = StyleSheet.create({
     borderRadius: 20,
   },
   button: {
-    margin: 10,
+    margin: 5,
     backgroundColor: "goldenrod",
     padding: 20,
     borderRadius: 20,
   },
   unclickbutton: {
-    margin: 10,
+    margin: 5,
     backgroundColor: "red",
     padding: 20,
     borderRadius: 20,
