@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 
 export default function App() {
 
@@ -18,8 +18,10 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>{count}</Text>
-      <Button title='Press Me!' onPress={buttonPressed} ></Button>
+      <Text style={styles.counter}>{count}</Text>
+      <TouchableOpacity onPress={buttonPressed} style={styles.button}>
+        <Text style={styles.buttonText}>Click Meeee!</Text>
+      </TouchableOpacity>
       <Text style={styles.encouragingText}>{renderEncouragingText()}</Text>
     </View>
   );
@@ -28,15 +30,31 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'darkgray',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  counter: {
+    fontWeight: "bold",
+    fontSize: 20,
+    color: "red"
+  },
   encouragingText: {
     margin: 50,
-    backgroundColor: "darkgray",
+    backgroundColor: "orange",
     color: "white",
     padding: 10,
     borderRadius: 20,
+  },
+  button: {
+    margin: 10,
+    backgroundColor: "goldenrod",
+    padding: 20,
+    borderRadius: 20,
+  },
+  buttonText:{
+    color: "white",
+    fontWeight: "bold",
+    fontStyle: 40
   }
 });
