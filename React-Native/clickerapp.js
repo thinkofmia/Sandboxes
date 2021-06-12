@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
+
+  let [count, setCount] = useState(0);
 
   function buttonPressed(){
     alert('You poked me! Owwie.');
