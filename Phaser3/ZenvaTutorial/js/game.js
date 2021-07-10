@@ -6,6 +6,12 @@ gameScene.preload = function(){
   //Load Images
   this.load.image('background', 'assets/background.png');
   this.load.image('player', 'assets/player.png');
+};
+
+//Called once after the preload ends
+gameScene.create = function() {
+  //create bg sprite
+  this.add.sprite(0, 0, 'background');
 }
 
 // set the configuration of the game
