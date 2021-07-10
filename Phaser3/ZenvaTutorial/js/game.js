@@ -39,6 +39,10 @@ gameScene.create = function() {
   enemy1.scaleY = 2;
   
   enemy2.displayWidth = 300;
+
+  //Flip dragon
+  enemy1.flipX = true;
+  enemy2.flipY = true;
 }
 
 // set the configuration of the game
