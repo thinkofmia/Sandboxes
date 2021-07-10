@@ -6,6 +6,7 @@ gameScene.preload = function(){
   //Load Images
   this.load.image('background', 'assets/background.png');
   this.load.image('player', 'assets/player.png');
+  this.load.image('enemy', 'assets/dragon.png');
 };
 
 //Called once after the preload ends
@@ -28,6 +29,13 @@ gameScene.create = function() {
 
   //Scaling of player
   player.setScale(2);
+
+
+  //Create enemu
+  let enemy = this.add.sprite(250,180,'enemy');
+
+  enemy.scaleX = 2;
+  enemy.scaleY = 2;
 }
 
 // set the configuration of the game
