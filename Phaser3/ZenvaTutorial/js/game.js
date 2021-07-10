@@ -22,13 +22,13 @@ gameScene.create = function() {
 
   // place player sprite
   bg.setPosition(gameW/2, gameH/2);
-  let player = this.add.sprite(70, 180, 'player');
+  this.player = this.add.sprite(70, 180, 'player');
   //player.depth = 1;
   //player.x = 10;
   //player.y = 10;
 
   //Scaling of player
-  player.setScale(0.5);
+  this.player.setScale(0.5);
 
 
   //Create enemu
@@ -60,6 +60,9 @@ gameScene.update = function(){
   this.enemy1.x += 1;
 
   this.enemy2.angle += 1;
+
+  if (this.player.scaleX<2) this.player.scaleX += 0.1;
+  if (this.player.scaleY<2) this.player.scaleY += 0.1;
 }
 
 // set the configuration of the game
