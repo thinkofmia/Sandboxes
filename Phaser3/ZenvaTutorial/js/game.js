@@ -23,6 +23,8 @@ gameScene.create = function() {
   bg.setPosition(gameW/2, gameH/2);
   let player = this.add.sprite(70, 180, 'player');
   //player.depth = 1;
+  //player.x = 10;
+  //player.y = 10;
 }
 
 // set the configuration of the game
