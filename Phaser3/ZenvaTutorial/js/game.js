@@ -37,6 +37,8 @@ gameScene.create = function() {
 
   enemy1.scaleX = 2;
   enemy1.scaleY = 2;
+  
+  enemy2.displayWidth = 300;
 }
 
 // set the configuration of the game
