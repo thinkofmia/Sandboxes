@@ -44,9 +44,13 @@ gameScene.create = function() {
   enemy1.flipX = true;
   enemy2.flipY = true;
 
-  //Rotate
+  //Rotate in degrees
   enemy1.angle = 45; //rotate 45 degrees clockwise
   enemy2.setAngle(-45);// counterclockwise
+
+  //Rotate in radians
+  enemy1.rotation = Math.PI/4;
+  enemy2.setRotation(Math.PI/4);
 }
 
 // set the configuration of the game
