@@ -11,7 +11,10 @@ gameScene.preload = function(){
 //Called once after the preload ends
 gameScene.create = function() {
   //create bg sprite
-  this.add.sprite(0, 0, 'background');
+  let bg = this.add.sprite(0, 0, 'background');
+
+  //change the origin to the top-left corner
+  bg.setOrigin(0,0);
 }
 
 // set the configuration of the game
