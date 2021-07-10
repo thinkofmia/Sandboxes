@@ -28,21 +28,25 @@ gameScene.create = function() {
   //player.y = 10;
 
   //Scaling of player
-  player.setScale(2);
+  player.setScale(0.5);
 
 
   //Create enemu
   let enemy1 = this.add.sprite(250,180,'enemy');
   let enemy2 = this.add.sprite(450,180,'enemy');
 
-  enemy1.scaleX = 2;
-  enemy1.scaleY = 2;
+  enemy1.scaleX = 3;
+  enemy1.scaleY = 3;
   
   enemy2.displayWidth = 300;
 
   //Flip dragon
   enemy1.flipX = true;
   enemy2.flipY = true;
+
+  //Rotate
+  enemy1.angle = 45; //rotate 45 degrees clockwise
+  enemy2.setAngle(-45);// counterclockwise
 }
 
 // set the configuration of the game
