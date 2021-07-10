@@ -32,27 +32,34 @@ gameScene.create = function() {
 
 
   //Create enemu
-  let enemy1 = this.add.sprite(250,180,'enemy');
-  let enemy2 = this.add.sprite(450,180,'enemy');
+  this.enemy1 = this.add.sprite(250,180,'enemy');
+  this.enemy2 = this.add.sprite(450,180,'enemy');
 
   //enemy1.setOrigin(0,0);
 
-  enemy1.scaleX = 3;
-  enemy1.scaleY = 3;
+  this.enemy1.scaleX = 3;
+  this.enemy1.scaleY = 3;
   
-  enemy2.displayWidth = 300;
+  this.enemy2.displayWidth = 300;
 
   //Flip dragon
-  enemy1.flipX = true;
-  enemy2.flipY = true;
+  this.enemy1.flipX = true;
+  this.enemy2.flipY = true;
 
   //Rotate in degrees
-  enemy1.angle = 45; //rotate 45 degrees clockwise
-  enemy2.setAngle(-45);// counterclockwise
+  this.enemy1.angle = 45; //rotate 45 degrees clockwise
+  this.enemy2.setAngle(-45);// counterclockwise
 
   //Rotate in radians
-  enemy1.rotation = Math.PI/4;
-  enemy2.setRotation(Math.PI/4);
+  this.enemy1.rotation = Math.PI/4;
+  this.enemy2.setRotation(Math.PI/4);
+}
+
+// this is called up to 60 times/s
+gameScene.update = function(){
+  this.enemy1.x += 1;
+
+  this.enemy2.angle += 1;
 }
 
 // set the configuration of the game
