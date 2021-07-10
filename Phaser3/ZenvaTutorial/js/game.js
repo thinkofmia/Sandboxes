@@ -32,10 +32,11 @@ gameScene.create = function() {
 
 
   //Create enemu
-  let enemy = this.add.sprite(250,180,'enemy');
+  let enemy1 = this.add.sprite(250,180,'enemy');
+  let enemy2 = this.add.sprite(450,180,'enemy');
 
-  enemy.scaleX = 2;
-  enemy.scaleY = 2;
+  enemy1.scaleX = 2;
+  enemy1.scaleY = 2;
 }
 
 // set the configuration of the game
