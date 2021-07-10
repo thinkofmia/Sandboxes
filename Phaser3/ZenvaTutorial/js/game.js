@@ -35,6 +35,8 @@ gameScene.create = function() {
   let enemy1 = this.add.sprite(250,180,'enemy');
   let enemy2 = this.add.sprite(450,180,'enemy');
 
+  //enemy1.setOrigin(0,0);
+
   enemy1.scaleX = 3;
   enemy1.scaleY = 3;
   
