@@ -25,6 +25,9 @@ gameScene.create = function() {
   //player.depth = 1;
   //player.x = 10;
   //player.y = 10;
+
+  //Scaling of player
+  player.setScale(2);
 }
 
 // set the configuration of the game
