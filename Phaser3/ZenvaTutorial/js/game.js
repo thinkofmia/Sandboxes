@@ -4,7 +4,8 @@ let gameScene = new Phaser.Scene('Game');
 //Load Assets
 gameScene.preload = function(){
   //Load Images
-  this.load.image('background','assets/background.png')
+  this.load.image('background', 'assets/background.png');
+  this.load.image('player', 'assets/player.png');
 }
 
 // set the configuration of the game
