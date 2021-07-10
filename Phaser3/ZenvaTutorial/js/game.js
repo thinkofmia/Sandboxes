@@ -12,9 +12,19 @@ gameScene.preload = function(){
 gameScene.create = function() {
   //create bg sprite
   let bg = this.add.sprite(0, 0, 'background');
+  let player = this.add.sprite(0, 0, 'player');
 
   //change the origin to the top-left corner
   bg.setOrigin(0,0);
+
+  //Set position of player/centre
+  let gameW = this.sys.game.config.width;
+  let gameH = this.sys.game.config.height;
+
+  player.setPosition(gameW/2, gameH/2);
+
+  console.log(gameW, gameH);
+  console.log(bg);
 }
 
 // set the configuration of the game
