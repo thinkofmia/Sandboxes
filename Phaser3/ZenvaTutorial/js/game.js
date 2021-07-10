@@ -16,7 +16,10 @@ gameScene.create = function() {
   let gameW = this.sys.game.config.width;
   let gameH = this.sys.game.config.height;
 
-  // place sprite in the center
+  //Change origin
+  //bg.setOrigin(0,0);
+
+  // place player sprite
   bg.setPosition(gameW/2, gameH/2);
   let player = this.add.sprite(70, 180, 'player');
 }
