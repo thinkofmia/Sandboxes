@@ -20,3 +20,5 @@ var kai = "Kyrin";
 let finalString = `${name} is ${age} years old.`;
 
 kai = kai.padEnd(8, '.'); 
+
+let appid = 221380;
