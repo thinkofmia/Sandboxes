@@ -24,3 +24,14 @@ kai = kai.padEnd(8, '.');
 let appid = 221380;
 //http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=221380&format=xml
 //Steam api
+
+var numbers = [1,2,3];
+numbers = [1,2];
+numbers[1];
+numbers[0] = 4;
+
+numbers.includes(4);
+
+var inventory = {'food': 2, 'clothing': 3};
+inventory['clothing'] = 4;
+inventory['food'];
