@@ -22,3 +22,5 @@ let finalString = `${name} is ${age} years old.`;
 kai = kai.padEnd(8, '.'); 
 
 let appid = 221380;
+//http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=221380&format=xml
+//Steam api
