@@ -4,7 +4,9 @@
   "description": "",
   "main": "modernJavascript.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node ModernJavascript.js"
+
   },
   "author": "",
   "license": "ISC"
