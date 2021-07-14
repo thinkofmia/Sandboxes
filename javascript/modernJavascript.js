@@ -13,3 +13,10 @@ isAlive = 5 > 2;
 
 const pi = 3.14159;
 let numberOfLimbs = 4;
+
+var name = "Mia";
+var kai = "Kyrin";
+
+let finalString = `${name} is ${age} years old.`;
+
+kai = kai.padEnd(8, '.'); 
