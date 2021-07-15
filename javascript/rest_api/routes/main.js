@@ -8,8 +8,13 @@ router.get('/', (request, response)=>{
 });
 
 router.get('/status', (request, response)=>{
+    response.cookie('testing', 'test');
     response.status(200).json({ message: 'ok', status: 200});
-    response.send('Hello world');
+});
+
+router.get('/status2', (request, response)=>{
+    console.log(request.cookies);
+    response.status(200).json({ message: 'ok', status: 200});
 });
 
 router.post('/signup', (request, response, next)=>{
