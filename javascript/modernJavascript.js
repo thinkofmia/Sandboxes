@@ -79,7 +79,18 @@ let url = 'http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPerce
 async function fetchData(url){
     let response = await fetch(url);
     let jsonResponse = await response.json();
-    console.log(JSON.stringify(jsonResponse));
+    printData(jsonResponse);
+    //console.log(JSON.stringify(jsonResponse));
+}
+
+function printData(jsonData){
+    let jsonObject = jsonData['achievementpercentages'];
+    let allAchievements = jsonObject['achievements'];
+
+    for (let achievement of allAchievements){
+        let name = achievement['name'];
+        console.log(name);
+    }
 }
 
 fetchData(url).catch(function(){
