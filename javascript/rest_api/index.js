@@ -5,7 +5,8 @@ const routes = require('./routes/main');
 const passwordRoutes = require('./routes/password');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+//console.log(process.env.PORT);
 
 //Update express settings
 app.use(bodyParser.urlencoded({extended: false}));// parse app/x-www-form-urlencoded
