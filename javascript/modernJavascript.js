@@ -44,3 +44,25 @@ var result = sum(1,2);
 var result = sum(1);
 
 var result = (number1, number2) => { return number1 + number2};
+
+const promise = new Promise((resolve, reject)=>{
+    let number1 = 5;
+    if (number1 == 5){
+        resolve('Success');
+    }
+    else{
+        reject('Failure');
+    }
+});
+
+promise.then((message)=>{
+    console.log(message);
+}).catch((message)=>{
+    console.log(message);
+});
+
+async function sum(number1, number2 = 2) {
+    return await number1 + number2;
+};
+
+sum(1,2);
