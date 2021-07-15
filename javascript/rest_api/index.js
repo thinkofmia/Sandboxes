@@ -26,28 +26,61 @@ app.get('/status', (request, response)=>{
 });
 
 app.post('/signup', (request, response, next)=>{
-    next(new Error('test'));
-//    response.status(200).json({ message: 'ok', status: 200});
+//    next(new Error('test'));
+    console.log(request.body);
+    if (!request.body){
+        response.status(400).json({message: 'invalid body', status: 400});
+    }
+    else
+        response.status(200).json({ message: 'ok', status: 200});
 });
 
 app.post('/login', (request, response)=>{
-    response.status(200).json({ message: 'ok', status: 200});
+    console.log(request.body);
+    if (!request.body){
+        response.status(400).json({message: 'invalid body', status: 400});
+    }
+    else
+        response.status(200).json({ message: 'ok', status: 200});
 });
 
 app.post('/logout', (request, response)=>{
-    response.status(200).json({ message: 'ok', status: 200});
+    console.log(request.body);
+    if (!request.body){
+        response.status(400).json({message: 'invalid body', status: 400});
+    }
+    else
+        response.status(200).json({ message: 'ok', status: 200});
 });
 
 app.post('/token', (request, response)=>{
-    response.status(200).json({ message: 'ok', status: 200});
+    if (!request.body || !request.body.refreshToken){
+        response.status(400).json({message: 'invalid body', status: 400});
+    }
+    else {
+        const {refreshToken} = request.body;
+        response.status(200).json({ message: `refresh token requested for token ${refreshToken}`, status: 200});
+    }   
 });
 
 app.post('/forget-password', (request, response)=>{
-    response.status(200).json({ message: 'ok', status: 200});
+    if (!request.body || !request.body.email){
+        response.status(400).json({message: 'invalid body', status: 400});
+    }
+    else {
+        const { email } = request.body;
+        response.status(200).json({ message: `forget password requested for token ${email}`, status: 200});
+    }   
 });
 
 app.post('/reset-password', (request, response, next)=>{
-    response.status(200).json({ message: 'ok', status: 200});
+    if (!request.body || !request.body.email){
+        response.status(400).json({message: 'invalid body', status: 400});
+    }
+    else {
+        const { email } = request.body;
+        response.status(200).json({ message: `reset password requested for token ${email}`, status: 200});
+    }   
 });
 
 app.get('/test', (request, response)=>{
