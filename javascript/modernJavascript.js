@@ -67,6 +67,11 @@ async function sum(number1, number2 = 2) {
 
 sum(1,2);
 
+var numbers = [1,2,3];
+for (let number of numbers){
+    console.log(number);
+}
+
 const fetch = require('node-fetch');
 
 let url = 'http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=221380&format=xml';
