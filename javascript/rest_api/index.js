@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const app = express();
 const port = 3000;
 
+//Update express settings
+app.use(bodyParser.urlencoded({extended: false}));// parse app/x-www-form-urlencoded
+app.use(bodyParser.json()); //parse app/json
+
 /**
  * Routes:
  *  - 404 Handler
