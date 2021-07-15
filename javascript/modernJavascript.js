@@ -72,6 +72,15 @@ for (let number of numbers){
     console.log(number);
 }
 
+var number = 1;
+if (number==0){
+    console.log('Number is 0');
+}else if (number == 1){
+    console.log('Number is 1');
+}else{
+    console.log('Number is something else');
+}
+
 const fetch = require('node-fetch');
 
 let url = 'http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=221380&format=xml';
@@ -83,7 +92,10 @@ class Achievement{
     }
 
     printValues(){
-        console.log(`${this.name} achievement has been completed by ${this.percent}% of people.`);
+
+        if(this.percent == 0){
+            console.log(`No one has completed the achievement: ${this.name}.`);
+        } else {console.log(`${this.name} achievement has been completed by ${this.percent}% of people.`);}
     }
 };
 
@@ -108,6 +120,8 @@ function printData(jsonData){
         achievementsArray.push(newAchievement);
         //console.log(name);
     }
+
+    console.log(achievementsArray.length);
 }
 
 fetchData(url).catch(function(){
