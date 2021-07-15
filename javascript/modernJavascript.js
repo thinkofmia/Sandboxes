@@ -35,3 +35,12 @@ numbers.includes(4);
 var inventory = {'food': 2, 'clothing': 3};
 inventory['clothing'] = 4;
 inventory['food'];
+
+function sum(number1, number2 = 2) {
+    return number1 + number2;
+}
+
+var result = sum(1,2);
+var result = sum(1);
+
+var result = (number1, number2) => { return number1 + number2};
