@@ -76,6 +76,17 @@ const fetch = require('node-fetch');
 
 let url = 'http://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=221380&format=xml';
 
+class Achievement{
+    constructor(name, percent){
+        this.name = name;
+        this.percent = percent;
+    }
+
+    printValues(){
+        console.log(`${this.name} achievement has been completed by ${this.percent}% of people.`);
+    }
+};
+
 async function fetchData(url){
     let response = await fetch(url);
     let jsonResponse = await response.json();
