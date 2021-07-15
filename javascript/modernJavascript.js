@@ -95,12 +95,18 @@ async function fetchData(url){
 }
 
 function printData(jsonData){
+    var achievementsArray = [];
     let jsonObject = jsonData['achievementpercentages'];
     let allAchievements = jsonObject['achievements'];
 
     for (let achievement of allAchievements){
         let name = achievement['name'];
-        console.log(name);
+        let percent = achievement['percent'];
+        let newAchievement = new Achievement(name,percent);
+
+        newAchievement.printValues();
+        achievementsArray.push(newAchievement);
+        //console.log(name);
     }
 }
 
