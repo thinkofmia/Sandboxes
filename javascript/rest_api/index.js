@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require ('express');
 const bodyParser = require('body-parser');
 
@@ -6,7 +8,7 @@ const passwordRoutes = require('./routes/password');
 
 const app = express();
 const port = process.env.PORT || 3000;
-//console.log(process.env.PORT);
+console.log(process.env);
 
 //Update express settings
 app.use(bodyParser.urlencoded({extended: false}));// parse app/x-www-form-urlencoded
