@@ -25,7 +25,7 @@ mongoose.connect(uri, mongoConfig);
 
 mongoose.connection.on('error', (error) => {
   console.log(error);
-  process.exit(1);
+  process.exit(1);//Terminate running node application
 });
 
 mongoose.set('useFindAndModify', false);
