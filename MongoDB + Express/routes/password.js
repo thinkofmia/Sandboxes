@@ -54,8 +54,8 @@ router.post('/forgot-password', async (request, response) => {
     template: 'forgot-password',
     subject: 'Zenva Phaser MMO Password Reset',
     context: {
-      name: user.username,
-      url: `http://localhost:${process.env.PORT || 3000}?token=${token}`,
+      name: 'joe',
+      url: `http://localhost:${process.env.PORT || 3000}/reset-password.html?token=${token}`,
     },
   };
   await smtpTransport.sendMail(emailOptions);

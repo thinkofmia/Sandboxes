@@ -1,6 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
+const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
@@ -25,7 +26,7 @@ mongoose.connect(uri, mongoConfig);
 
 mongoose.connection.on('error', (error) => {
   console.log(error);
-  process.exit(1);//Terminate running node application
+  process.exit(1);
 });
 
 mongoose.set('useFindAndModify', false);
@@ -34,13 +35,23 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // update express settings
-app.use(express.urlencoded({ extended: false })); // parse application/x-www-form-urlendcoded
-app.use(express.json()); // parse application/json
+app.use(bodyParser.urlencoded({ extended: false })); // parse application/x-www-form-urlendcoded
+app.use(bodyParser.json()); // parse application/json
 app.use(cookieParser());
 app.use(cors({ credentials: true, origin: process.env.CORS_ORIGIN }));
 
 // require passport auth
 require('./auth/auth');
+
+app.get('/game.html', passport.authenticate('jwt', { session: false }), (request, response) => {
+  response.status(200).json(request.user);
+});
+
+app.use(express.static(__dirname + '/public'));
+
+app.get('/', (request, response) => {
+  response.send(__dirname + '/index.html');
+});
 
 // setup routes
 app.use('/', routes);
@@ -59,7 +70,7 @@ app.use((error, request, response, next) => {
 });
 
 mongoose.connection.on('connected', () => {
-  console.log('connected to mongo');
+  console.log('connceted to mongo');
   app.listen(port, () => {
     console.log(`server is running on port: ${port}`);
   });
